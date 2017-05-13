@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oauth2.model">
+
+	<class name="Token" table="Token">
+
+		<id name="id" type="java.lang.Integer" column="id">
+			<generator class="increment" />
+		</id>
+
+		<property name="username" type="java.lang.String"
+			column="username" not-null="true" />
+
+		<property name="appid" type="java.lang.String"
+			column="appid" not-null="true" />
+
+		<property name="redirectUri" type="java.lang.String"
+			column="redirect_uri" not-null="true" />
+
+		<property name="authorizationCode" type="java.lang.String"
+			column="authorization_code" not-null="true" />
+
+		<property name="accessToken" type="java.lang.String"
+			column="access_token" not-null="true" />
+
+		<property name="used" type="java.lang.String"
+			column="used" not-null="true" />
+
+		<property name="createAt" type="java.util.Date"
+			column="create_at" not-null="false" />
+
+		<property name="updateAt" type="java.util.Date"
+			column="update_at" not-null="false" />
+
+	</class>
+</hibernate-mapping>
